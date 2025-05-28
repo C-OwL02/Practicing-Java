@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class GradeCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter Student Name: ");
+        String name = scanner.nextLine();
+        System.out.print("Enter Student Math Grade: ");
+        int math = scanner.nextInt();
+        System.out.print("Enter Student Science Grade: ");
+        int science = scanner.nextInt();
+        System.out.print("Enter Student English Grade: ");
+        int english = scanner.nextInt();
+
+        System.out.println();
+
+        int average = math + science + english;
+            average /= 3;
+
+        System.out.println("Student: " + name);
+        System.out.println("Average Grade: " + average);
+
+        
+        if (average >= 90 && average <= 100) {
+                System.out.print("Grade: A");
+            }else if (average >= 80 && average < 90) {
+                System.out.println("Grade: B");
+            }else if (average >= 70 && average < 80) {
+                System.out.print("Grade: C");
+            } else if ( average>= 60 && average < 70) {
+                System.out.print("Grade: D");
+            }else {
+                System.out.print("Grade: F");
+            }
+        
+        scanner.close();
+    }
+}
